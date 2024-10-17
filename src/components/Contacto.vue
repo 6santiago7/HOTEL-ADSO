@@ -1,0 +1,5 @@
+<template>
+  <div>
+    <h1>CONTACTO</h1>
+  </div>
+</template>
