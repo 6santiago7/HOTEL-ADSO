@@ -11,7 +11,7 @@ const routes =[
     {path: "/DeportesEX", component: DeportesEX},
     {path: "/Habitaciones", component: Habitaciones},
     {path: "/Servicios", component: Servicios},
-    {path: "/", component: Lobby},
+    {path: "/lobby", component: Lobby},
 ]
 
 export const router = createRouter ({
