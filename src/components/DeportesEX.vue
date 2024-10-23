@@ -141,6 +141,7 @@ export default {
   overflow: hidden;
   text-align: center;
   transition: transform 0.2s;
+
 }
 
 .card:hover {
@@ -162,4 +163,6 @@ export default {
   padding: 0 10px;
   font-size: 0.9em;
 }
+
+
 </style>
