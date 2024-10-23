@@ -8,7 +8,7 @@
     <div class="card-container">
       <div class="card" v-for="(training, index) in gymTrainings" :key="index">
         <img :src="training.image" alt="Entrenamiento" />
-        <h3>{{ training.title }}</h3>
+        <h3 class="training-title">{{ training.title }}</h3>
         <p>{{ training.description }}</p>
       </div>
     </div>
@@ -21,56 +21,12 @@
     <div class="card-container">
       <div class="card" v-for="(food, index) in restaurantFoods" :key="index">
         <img :src="food.image" alt="Comida" />
-        <h3>{{ food.title }}</h3>
+        <h3 class="food-title">{{ food.title }}</h3>
         <p>{{ food.description }}</p>
       </div>
     </div>
   </div>
 </template>
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-.banner {
-  color: white;
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.gym-banner {
-  background-color: #ff5722;
-}
-
-.restaurant-banner {
-  background-color: #4caf50;
-}
-
-.card-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-
-.card {
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  width: 200px;
-  text-align: center;
-  margin: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 8px;
-}
-</style>
 
 <script>
 export default {
@@ -135,3 +91,70 @@ export default {
   },
 };
 </script>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.banner {
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  margin: 40px 20px;
+  border-radius: 10px; 
+}
+
+.gym-banner {
+  background-image: url('https://cdn.static.aptavs.com/imagenes/ejercicios-basicos-de-gimnasio-cuales-son-y-su-importancia/ejercicios-basicos-de-gimnasio.jpg');
+  height: 300px;
+}
+
+.restaurant-banner {
+  background-image: url('https://imagenes.eltiempo.com/files/image_1200_600/uploads/2022/11/11/636ec9b036dfd.png');
+  height: 300px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.training-title{
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.food-title{
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+</style>
+
+
