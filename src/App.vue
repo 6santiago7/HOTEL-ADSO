@@ -9,18 +9,18 @@
           <q-avatar>
             <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
           </q-avatar>
-          Title
+          El Palacio del Sol
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
   
   <q-drawer show-if-above v-model="leftDrawerOpen" side="left" bordered>
     <div class="drawer-content">
+      <q-btn class="drawer-button" label="Lobby" to="/Lobby" />
+      <q-btn class="drawer-button" label="Habitaciones" to="/Habitaciones" />
+      <q-btn class="drawer-button" label="Servicios" to="/Servicios" />
       <q-btn class="drawer-button" label="Deportes EX" to="/DeportesEX" />
       <q-btn class="drawer-button" label="Contacto" to="/Contacto" />
-      <q-btn class="drawer-button" label="Habitaciones" to="/Habitaciones" />
-      <q-btn class="drawer-button" label="Lobby" to="/Lobby" />
-      <q-btn class="drawer-button" label="Servicios" to="/Servicios" />
     </div>
   </q-drawer>
 
@@ -52,18 +52,18 @@ export default {
 <style>
 .drawer-content {
   display: flex;
-  flex-direction: column; /* Alinea los botones verticalmente */
-  padding: 20px; /* Espacio interno */
+  flex-direction: column;
+  padding: 20px;
 }
 
 .drawer-button {
-  margin-bottom: 10px; /* Espacio entre los botones */
-  background-color: #07a1a1; /* Color de fondo del botón */
-  color: white; /* Color del texto */
-  transition: background-color 0.3s; /* Transición de color */
+  margin-bottom: 10px;
+  background-color: #07a1a1;
+  color: white;
+  transition: background-color 0.3s;
 }
 
 .drawer-button:hover {
-  background-color: #048080; /* Color de fondo al pasar el mouse */
+  background-color: #048080;
 }
 </style>
