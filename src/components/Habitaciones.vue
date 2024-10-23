@@ -17,7 +17,7 @@
       <div class="room-card" v-for="room in rooms" :key="room.id">
         <img :src="room.image" alt="Room Image" class="room-image" />
         <div class="room-info">
-          <h2>{{ room.title }}</h2>
+          <h2 class="room-title">{{ room.title }}</h2>
           <p>{{ room.description }}</p>
           <span class="price">{{ room.price }} USD/Noche</span>
         </div>
@@ -25,69 +25,6 @@
     </div>
   </div>
 </template>
-
-<style>
-.banner {
-  position: relative;
-  text-align: center;
-  color: white;
-  overflow: hidden; 
-  height: 300px; 
-}
-
-.banner-images {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.banner-image {
-  width: 100%;
-  height: 300px; 
-  object-fit: cover;
-}
-
-.banner-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2.5rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-.room-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.room-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s;
-}
-
-.room-card:hover {
-  transform: scale(1.05);
-}
-
-.room-image {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-.room-info {
-  padding: 15px;
-}
-
-.price {
-  font-weight: bold;
-  color: #2e7d32;
-}
-</style>
 
 <script>
 export default {
@@ -109,7 +46,7 @@ export default {
           title: 'Habitación Doble',
           description: 'Cómoda habitación para dos personas con vistas al mar.',
           price: 100,
-          image: 'https://www.santuariohotel.com/wp-content/uploads/2019/01/GaleriaHabitacion2.jpg',
+          image: 'https://www.ghlhoteles.com/cache/4f/56/4f56b540dec02093f24f38473594cecf.jpg',
         },
         {
           id: 2,
@@ -203,3 +140,75 @@ export default {
   },
 };
 </script>
+
+<style>
+
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+  overflow: hidden; 
+  height: 300px; 
+}
+
+.banner-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.banner-image {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover;
+}
+
+.banner-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.room-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.room-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.room-card:hover {
+  transform: scale(1.05);
+}
+
+.room-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.room-info {
+  padding: 15px;
+}
+
+.price {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.room-title{
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+</style>
+
+
