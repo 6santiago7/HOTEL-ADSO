@@ -26,31 +26,26 @@
 </template>
 
 <script>
+import { ref, onMounted } from 'vue';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
 export default {
   name: 'App',
-  data() {
-    return {
-      formData: {
-        name: '',
-        email: '',
-        age: '',
-      },
-      ageOptions: Array.from({ length: 100 }, (_, i) => i + 1),
+  setup() {
+    const formData = ref({
+      name: '',
+      email: '',
+      age: '',
+    });
+    const ageOptions = Array.from({ length: 100 }, (_, i) => i + 1);
+
+    const handleSubmit = () => {
+      alert(`Nombre: ${formData.value.name}\nCorreo: ${formData.value.email}\nEdad: ${formData.value.age}`);
+      formData.value = { name: '', email: '', age: '' };
     };
-  },
-  methods: {
-    handleSubmit() {
-      alert(`Nombre: ${this.formData.name}\nCorreo: ${this.formData.email}\nEdad: ${this.formData.age}`);
-      this.formData = {
-        name: '',
-        email: '',
-        age: '',
-      };
-    },
-    initMap() {
+
+    const initMap = () => {
       const map = L.map('map').setView([6.5596, -73.1348], 13);
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -61,10 +56,17 @@ export default {
       L.marker([6.5596, -73.1348]).addTo(map)
         .bindPopup('San Gil, Santander, Colombia')
         .openPopup();
-    },
-  },
-  mounted() {
-    this.initMap();
+    };
+
+    onMounted(() => {
+      initMap();
+    });
+
+    return {
+      formData,
+      ageOptions,
+      handleSubmit,
+    };
   },
 };
 </script>

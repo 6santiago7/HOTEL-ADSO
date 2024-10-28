@@ -38,34 +38,29 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'App',
-  data() {
-    return {
-      currentImageIndex: 0,
-      gymImages: [
-        'https://cdn.static.aptavs.com/imagenes/ejercicios-basicos-de-gimnasio-cuales-son-y-su-importancia/ejercicios-basicos-de-gimnasio.jpg',
-        'https://xplorercolombia.com/wp-content/uploads/2021/06/sangil-deportes-extremo.jpg',
-        'https://cloudfront-us-east-1.images.arcpublishing.com/elespectador/2K7FHLJP75FGRO2LKQMCFKFKWA.jpg',
-        'https://www.fluidra.com/projects//web/app/uploads/2022/04/iStock-641448082_iStock-641448082-1.jpg'
-      ],
-    };
-  },
-  mounted() {
-    this.startImageRotation();
-  },
-  methods: {
-    startImageRotation() {
-      setInterval(() => {
-        this.currentImageIndex = (this.currentImageIndex + 1) % this.gymImages.length;
-      }, 3000);
-    },
-  },
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const currentImageIndex = ref(0);
+const gymImages = [
+  'https://cdn.static.aptavs.com/imagenes/ejercicios-basicos-de-gimnasio-cuales-son-y-su-importancia/ejercicios-basicos-de-gimnasio.jpg',
+  'https://xplorercolombia.com/wp-content/uploads/2021/06/sangil-deportes-extremo.jpg',
+  'https://cloudfront-us-east-1.images.arcpublishing.com/elespectador/2K7FHLJP75FGRO2LKQMCFKFKWA.jpg',
+  'https://www.fluidra.com/projects//web/app/uploads/2022/04/iStock-641448082_iStock-641448082-1.jpg'
+];
+
+const startImageRotation = () => {
+  setInterval(() => {
+    currentImageIndex.value = (currentImageIndex.value + 1) % gymImages.length;
+  }, 3000);
 };
+
+onMounted(() => {
+  startImageRotation();
+});
 </script>
 
-<style>
+<style scoped>
 #app {
   text-align: center;
   padding: 20px;
@@ -78,7 +73,7 @@ export default {
   color: white;
 }
 
-.banner-image {
+.banner-img {
   width: 100%;
   height: 300px;
   object-fit: cover;
