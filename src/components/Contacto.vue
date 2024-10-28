@@ -76,12 +76,10 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
 }
-
 .main-container {
   display: flex;
   justify-content: space-between;
 }
-
 .form-container {
   background-color: white;
   border-radius: 8px;
@@ -91,26 +89,21 @@ body {
   margin: 50px;
   transition: transform 0.2s;
 }
-
 .form-container:hover {
   transform: scale(1.02);
 }
-
 h2 {
   text-align: center;
   color: #333;
 }
-
 .form-group {
   margin-bottom: 15px;
 }
-
 label {
   display: block;
   margin-bottom: 5px;
   color: #555;
 }
-
 input,
 select {
   width: 100%;
@@ -119,13 +112,11 @@ select {
   border-radius: 4px;
   font-size: 16px;
 }
-
 input:focus,
 select:focus {
   border-color: #4CAF50;
   outline: none;
 }
-
 button {
   background-color: #4CAF50;
   color: white;
@@ -137,11 +128,9 @@ button {
   font-size: 16px;
   transition: background-color 0.3s;
 }
-
 button:hover {
   background-color: #45a049;
 }
-
 .map-container {
   width: 100%;
   height: 400px;
