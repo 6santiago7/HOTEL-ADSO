@@ -51,7 +51,6 @@ export default {
       };
     },
     initMap() {
-      // Coordenadas de San Gil, Santander, Colombia
       const map = L.map('map').setView([6.5596, -73.1348], 13);
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
