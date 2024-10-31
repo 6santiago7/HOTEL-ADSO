@@ -75,18 +75,18 @@ export default {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #000; /* Fondo negro para el cuerpo */
-  color: white; /* Color de texto blanco */
+  background-color: #000; 
+  color: white;
 }
 
 .main-container {
   display: flex;
   justify-content: space-between;
-  padding: 20px; /* Agrega espacio alrededor */
+  padding: 20px; 
 }
 
 .form-container {
-  background-color: #333; /* Fondo oscuro para el formulario */
+  background-color: #333; 
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   padding: 20px;
@@ -101,7 +101,7 @@ body {
 
 h2 {
   text-align: center;
-  color: #fff; /* Color de título blanco */
+  color: #fff; 
 }
 
 .form-group {
@@ -111,7 +111,7 @@ h2 {
 label {
   display: block;
   margin-bottom: 5px;
-  color: #fff; /* Color de texto de las etiquetas blanco */
+  color: #fff; 
 }
 
 input,
@@ -121,8 +121,8 @@ select {
   border: 1px solid #555;
   border-radius: 4px;
   font-size: 16px;
-  background-color: #444; /* Fondo oscuro para campos de entrada */
-  color: #fff; /* Texto blanco en campos de entrada */
+  background-color: #444; 
+  color: #fff; 
 }
 
 input:focus,
