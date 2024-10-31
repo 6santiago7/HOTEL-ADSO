@@ -66,7 +66,7 @@ const rooms = [
     title: 'Habitación Sencilla',
     description: 'Ideal para viajeros solitarios con todas las comodidades.',
     price: 80,
-    image: 'https://www.stanzahotel.com/wp-content/uploads/2023/10/habitacion_Sencilla_8.jpg',
+    image: 'https://media-cdn.tripadvisor.com/media/photo-s/03/f9/ef/1a/pequeno-gran-hotel.jpg',
   },
   {
     id: 5,
@@ -139,6 +139,10 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.body{
+  background: linear-gradient(90deg, #476ff3, #319afc, #86a8e7, #7f7fd5);
+}
+
 .banner {
   position: relative;
   text-align: center;
@@ -182,8 +186,11 @@ onMounted(() => {
 }
 
 .room-card:hover {
+  background-color: white;
   transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 .room-image {
   width: 100%;

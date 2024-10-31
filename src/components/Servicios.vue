@@ -92,6 +92,7 @@ const restaurantFoods = ref([
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background: linear-gradient(90deg, #476ff3, #319afc, #86a8e7, #7f7fd5);
 }
 
 .banner {
@@ -127,7 +128,7 @@ body {
 }
 
 .card {
-  background-color: white;
+  background-color: transparent;
   border: 1px solid #ccc;
   border-radius: 8px;
   width: 200px;
@@ -135,13 +136,15 @@ body {
   margin: 10px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
 }
+
 
 .card img {
   width: 100%;

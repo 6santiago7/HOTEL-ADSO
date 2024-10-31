@@ -1,21 +1,30 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header elevated class="bg-primary text-white">
-      <q-toolbar>
-        <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
+    <q-header elevated class="barraSup text-white">
+      <q-toolbar class="justify-between">
+        <q-btn 
+          dense 
+          flat 
+          round 
+          icon="🔶" 
+          @click="toggleLeftDrawer" 
+          class="menu-button"
+        />
 
-        <q-toolbar-title>
+        <div class="spacer"></div> 
+
+        <q-toolbar-title class="title-centered">
           <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
+            <img src='https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg' />
           </q-avatar>
           El Palacio del Sol
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
 
-    <q-drawer show-if-above v-model="leftDrawerOpen" side="left" bordered>
+    <q-drawer class="barra text-white" show-if-above v-model="leftDrawerOpen" side="left" bordered>
       <div class="drawer-content">
-        <q-btn class="drawer-button" label="Lobby" to="/Lobby" />
+        <q-btn class="drawer-button" label="Lobby" to="/" />
         <q-btn class="drawer-button" label="Habitaciones" to="/Habitaciones" />
         <q-btn class="drawer-button" label="Servicios" to="/Servicios" />
         <q-btn class="drawer-button" label="Deportes EX" to="/DeportesEX" />
@@ -48,12 +57,43 @@ function toggleLeftDrawer() {
 
 .drawer-button {
   margin-bottom: 10px;
-  background-color: #07a1a1;
+  background-color: #B0B0B0; /* Color gris por defecto */
   color: white;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .drawer-button:hover {
-  background-color: #048080;
+  background-color: white; /* Cambia a blanco al hacer hover */
+  color: #B0B0B0; /* Cambia el texto a gris al hacer hover */
+}
+
+.menu-button {
+  color: white; 
+  font-size: 24px; 
+  background-color: transparent; 
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+  background-color: rgba(255, 255, 255, 0.2); 
+}
+
+.title-centered {
+  display: flex;
+  align-items: center; 
+  margin-left: -200px; 
+}
+
+.spacer {
+  flex-grow: 1; 
+}
+
+.barraSup {
+  background: linear-gradient(90deg, #2b2b2e, #2a2b2c, #373738, #464649);
+}
+
+.barra {
+  background: linear-gradient(90deg, #2b2b2e, #2a2b2c, #373738, #464649);
 }
 </style>

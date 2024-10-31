@@ -99,7 +99,7 @@ const sports = ref([
 #app {
   text-align: center;
   padding: 20px;
-  background-color: white;
+  background: linear-gradient(90deg, #476ff3, #319afc, #86a8e7, #7f7fd5);
 }
 
 .banner {
@@ -131,16 +131,19 @@ const sports = ref([
 }
 
 .card {
+  background-color: transparent;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
   text-align: center;
-  transition: transform 0.2s;
+  transition: transform 0.2s, background-color 0.3s;
 }
 
 .card:hover {
   transform: scale(1.05);
+  background-color: white;
 }
+
 
 .sport-image {
   width: 100%;

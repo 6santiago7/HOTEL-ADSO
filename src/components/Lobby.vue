@@ -64,7 +64,7 @@ onMounted(() => {
 #app {
   text-align: center;
   padding: 20px;
-  background-color: white;
+  background: linear-gradient(90deg, #476ff3, #319afc, #86a8e7, #7f7fd5);
 }
 
 .banner {
